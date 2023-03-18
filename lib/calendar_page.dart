@@ -32,7 +32,6 @@ class _CalendarPageState extends State<CalendarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
       body: Center(
         child: Column(
           children: [
