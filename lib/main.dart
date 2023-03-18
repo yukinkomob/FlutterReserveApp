@@ -1,8 +1,10 @@
 import 'package:example0/bottom_tab_page.dart';
+import 'package:example0/calendar_page.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(const MyApp());
+  initializeDateFormatting().then((_) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BottomTabPage(),
+      home: CalendarPage(),
+      // home: BottomTabPage(),
     );
   }
 }
