@@ -11,7 +11,13 @@ class BottomTabPage extends StatefulWidget {
 
 class _BottomTabPageState extends State<BottomTabPage> {
   int _currentIndex = 0;
-  final _pageWidgets = [FirstPage(), SecondPage()];
+  final _pageWidgets = [
+    FirstPage(),
+    FirstPage(),
+    FirstPage(),
+    FirstPage(),
+    FirstPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +28,13 @@ class _BottomTabPageState extends State<BottomTabPage> {
       body: _pageWidgets.elementAt(_currentIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'First'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
+          BottomNavigationBarItem(icon: Icon(Icons.edit_note), label: '予約一覧'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.photo_album), label: 'Second'),
+              icon: Icon(Icons.text_snippet), label: '予約する'),
+          BottomNavigationBarItem(icon: Icon(Icons.info), label: 'お知らせ'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle), label: 'プロフィール'),
         ],
         currentIndex: _currentIndex,
         fixedColor: Colors.blueAccent,
